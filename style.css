@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent;
+    list-style: none;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+:root {
+    --font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    --font-weight-system-bold: 700;
+    --font-weight-system-extra-bold: 800;
+    --font-weight-system-extra-light: 200;
+    --font-weight-system-light: 300;
+    --font-weight-system-medium: 500;
+    --font-weight-system-regular: 400;
+    --font-weight-system-semibold: 600;
+}
+
+body {
+    background-color: white;
+    font-family: var(--font-family-system);
+    height: 100vh;
+    min-height: 100vh;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    max-width: 1200px; 
+    height: 604px;
+}
+
+.left-side {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left-side img {
+    width: 100%;
+    height: auto;
+    max-width: 465px; 
+}
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-17px);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+    height: 410px;
+    max-width: 350px; 
+    border: 1px solid #DBDBDB;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;  
+}
+
+#instagram {
+    height: auto;
+    margin-bottom: 35px;
+}
+
+form #instagram{
+    margin-top: 20px;
+}
+
+.input-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrap input {
+    background: #FAFAFA;
+    width: 100%;
+    height: 35px;
+    padding: 10px 10px;
+    font-size: 12px;
+    margin-bottom: 7px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding-top: 25px;
+}
+
+.input-wrap label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #737373;
+    pointer-events: none;
+    transition: 0.1s ease-out;
+    transform-origin: top left;
+}
+
+.input-wrap input:focus{
+    outline: none;
+}
+
+.input-wrap input:focus ~ label,
+.input-wrap input:not(:placeholder-shown) ~ label {
+    top: 5px;
+    left: 10px;
+    font-size: 10px;
+    color: #737373;
+}
+
+#show-password {
+    position: absolute;
+    display: none; 
+    font-size: 14px;
+    font-weight: 500;
+    color: #262626;
+    cursor: pointer;
+    top: 8px;
+    right: 10px;
+}
+
+#show-password:hover{
+    color: #737373;
+}
+
+#login-btn {
+    padding: 8px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #4CB5F9;
+    color: white;
+    font-weight: bold;
+}
+
+#login-btn:enabled {
+    background-color: #0095f6; 
+    cursor: pointer; 
+  }
+
+#login-btn:enabled:hover {
+    background-color: #1877F2; 
+    cursor: pointer;
+  }
+  
+.or {
+    margin-top: 22px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #737373;
+}
+
+.or:before, 
+.or:after{
+    content: "━━━━━━━━";
+    color: #DBDBDB;
+    margin: 0 15px;
+}
+
+.facebook a{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.facebook p{
+    color: #0095F6;
+    font-weight: 500;
+    padding: 7px;
+}
+
+.facebook p:hover{
+    color: #01165E;
+}
+
+.forget-pass{
+    color: #00376B;
+}
+
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    max-width: 350px; 
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+    margin-top: 10px;
+    box-sizing: border-box; 
+}
+
+.signup p{
+    margin-right: 5px;
+}
+
+.signup a{
+    color: #0095F6;
+    font-weight: 500;
+}
+
+.get-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.get-app p{
+    margin-bottom: 15px;
+}
+
+.get-app img{
+    width: 130px;
+    height: 40px;
+    margin: 2px;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer li, 
+.switch-language select, 
+h2{
+    color: #737373;
+    font-size: 12px;
+    margin: 8px;
+    border: none;
+    font-weight: normal;
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.links a:hover {
+    text-decoration: underline; 
+    text-decoration-color: #737373; 
+    text-decoration-thickness: 1px; 
+    text-decoration-skip-ink: none;
+}
+
+.switch-language select {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none; 
+    background-position: right 10px center; 
+    padding-right: 10px; 
+    background-image: url('Assets/Down-arrow/down-chevron-svgrepo-com.svg'); 
+    background-repeat: no-repeat;
+    background-size: 10px 10px;  
+    cursor: pointer;
+}
+
+select{
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none; 
+    font-family: inherit;      
+    font-size: inherit;   
+    color: inherit;            
+    outline: none;
+}
+
+select:focus{
+    outline: none;
+}
+
+.disclaimer p{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #737373;
+    text-align: center;
+}
+
+.disclaimer a{
+    font-size: 12px;
+    color: #d37c7c;
+    font-weight: 500;
+    margin-bottom: 52px;
+    margin-left: 3px;
+}
+
+.disclaimer a:hover{
+    color: #ad1010;
+}
+
+
+@media (max-width: 876px) {
+    .left-side img {
+        display: none;  
+    }
+}
